@@ -1,0 +1,113 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+<!--         <link rel="stylesheet" href="css/normalize.css"> -->
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel = "stylesheet" type = "text/css" href = "static/css/signup.css">
+<!--         <link rel="stylesheet" href="css/main.css"> -->
+</head>
+<body>
+
+	<div ng-controller="SignupCtrl">
+		<button class="button button1">Group To Goal</button>
+		<button class="button button2" ng-click="toLogin()">Login</button>
+		<button class="button button3" ng-click="toSignup()">Sign up</button>
+
+  	<form>
+  
+    <h1>Sign Up</h1>
+    
+    <fieldset>
+<!--           <legend><span class="number">1</span>Your basic info</legend> -->
+	    <label for="name">Name:</label>
+	    <input ng-model="userName" type="text" id="name" name="user_name" required autofocus>
+	      
+	    <label for="mail">Gmail:</label>
+	    <input ng-model="userGmail" type="email" id="mail" name="user_email" required>
+	      
+	    <label for="password">Password:</label>
+	    <input ng-model="userPassword" type="password" id="password" name="user_password" required>
+
+      <label for="interests">Interests:</label>
+      <input ng-model="userInterests" type="text" id="interests" name="user_interests" required>
+
+    </fieldset>
+        
+<!--         <fieldset>
+          <legend><span class="number">2</span>Your profile</legend>
+          <label for="bio">Biography:</label>
+          <textarea id="bio" name="user_bio"></textarea>
+        </fieldset> -->
+<!--         <fieldset>
+        <label for="job">Job Role:</label>
+        <select id="job" name="user_job">
+          <optgroup label="Web">
+            <option value="frontend_developer">Front-End Developer</option>
+            <option value="php_developor">PHP Developer</option>
+            <option value="python_developer">Python Developer</option>
+            <option value="rails_developer"> Rails Developer</option>
+            <option value="web_designer">Web Designer</option>
+            <option value="WordPress_developer">WordPress Developer</option>
+          </optgroup>
+          <optgroup label="Mobile">
+            <option value="Android_developer">Androild Developer</option>
+            <option value="iOS_developer">iOS Developer</option>
+            <option value="mobile_designer">Mobile Designer</option>
+          </optgroup>
+          <optgroup label="Business">
+            <option value="business_owner">Business Owner</option>
+            <option value="freelancer">Freelancer</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option value="secretary">Secretary</option>
+            <option value="maintenance">Maintenance</option>
+          </optgroup>
+        </select>
+        
+          <label>Interests:</label>
+          <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
+            <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label><br>
+          <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label>
+        
+        </fieldset> -->
+        <button class="button button4" ng-click="doSignup()">Sign Up</button>
+    </form>
+
+    </div>
+      
+</body>
+
+
+<!-- </body>  -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title> User Login and Sessions Signup</title>
+	<link rel = "stylesheet" type = "text/css" href = "static/css/style.css">
+</head>
+
+<body>
+    <p class = "links"><a href="http://localhost:8000/app/#/login.html">Log In</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	<a href="http://localhost:8000/app/#/signup.html">Sign Up</a></p>
+	
+	<h1 class = "title">GroupToGoal</h1>
+
+	<div class = "form-container">
+		<p class = "form-header">Sign Up</p>
+		<form method = "POST">
+			<lable>Username:</lable>
+			<input type = "text" name = "username"><br>
+
+			<lable>Password:</lable>
+			<input type = "text" name = "password"><br>
+
+			<lable>Email:</lable>
+			<input type = "text" name = "email"><br>
+
+			<input type = "submit" value = "Register">
+		</form>
+	</div>
+</body>
+</html>
